@@ -1,9 +1,11 @@
 import { ChangeEvent } from 'react';
-import { SearchProps } from '../constants';
+import { useMovieContext } from '../contexts/MovieContext';
 
-const Navbar = ({ searchQuery, setSearchQuery }: SearchProps) => {
+const Navbar = () => {
+    const { searchQuery, setSearchQuery } = useMovieContext();
+
     return (
-        <nav className="flex items-center justify-between">
+        <nav className="flex items-center justify-between mb-3">
             <label className="text-2xl">Movie<span className="text-red-500">App</span></label>
 
             <form

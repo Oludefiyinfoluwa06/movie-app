@@ -1,11 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import { SearchProps } from "../constants";
 
-const RootLayout = ({ searchQuery, setSearchQuery }: SearchProps) => {
+const RootLayout = () => {
     return (
         <div>
-            <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery}  />
+            <Navbar  />
             <main>
                 <Outlet />
             </main>

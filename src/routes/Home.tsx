@@ -1,13 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Movies, SearchProps } from "../constants";
+import { Movies } from "../constants";
 import { Link } from "react-router-dom";
 
 import noMovies from '../assets/no-movies.png';
+import { useMovieContext } from "../contexts/MovieContext";
 
-const Home = ({ searchQuery, setSearchQuery }: SearchProps) => {
+const Home = () => {
     const [movies, setMovies] = useState<Movies[] | undefined>();
-    
+    const { searchQuery, setSearchQuery } = useMovieContext();
+
     const apiKey = import.meta.env.VITE_OMDB_API_KEY;
 
     useEffect(() => {
