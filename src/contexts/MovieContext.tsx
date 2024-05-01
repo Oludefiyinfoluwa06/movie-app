@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useState } from "react";
 import { MovieContextValues } from "../constants";
 
 const defaultValues: MovieContextValues = {
@@ -19,6 +19,3 @@ export const MovieProvider = ({ children }: { children: ReactNode }) => {
         </MovieContext.Provider>
     )
 }
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const useMovieContext = () => useContext(MovieContext);

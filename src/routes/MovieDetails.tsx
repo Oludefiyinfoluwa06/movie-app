@@ -17,7 +17,7 @@ const MovieDetails = () => {
         const getAllMovies = async () => {
             try {
                 const response = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`);
-                console.log(response);
+                // console.log(response);
                 setMovie(response.data);
             } catch (error) {
                 console.log(error);

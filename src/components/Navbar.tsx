@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import { useMovieContext } from '../contexts/MovieContext';
+import { useMovieContext } from "../hooks/useMovieContext";
 
 const Navbar = () => {
     const { searchQuery, setSearchQuery } = useMovieContext();

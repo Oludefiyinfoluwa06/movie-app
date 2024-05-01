@@ -4,7 +4,7 @@ import { Movies } from "../constants";
 import { Link } from "react-router-dom";
 
 import noMovies from '../assets/no-movies.png';
-import { useMovieContext } from "../contexts/MovieContext";
+import { useMovieContext } from "../hooks/useMovieContext";
 
 const Home = () => {
     const [movies, setMovies] = useState<Movies[] | undefined>();
@@ -16,7 +16,7 @@ const Home = () => {
         const getAllMovies = async () => {
             try {
                 const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchQuery}`);
-                console.log(response);
+                // console.log(response);
                 setMovies(response.data.Search);
             } catch (error) {
                 console.log(error);
