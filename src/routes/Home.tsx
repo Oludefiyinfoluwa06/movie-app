@@ -15,7 +15,7 @@ const Home = () => {
     useEffect(() => {
         const getAllMovies = async () => {
             try {
-                const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchQuery}`);
+                const response = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchQuery}`);
                 // console.log(response);
                 setMovies(response.data.Search);
             } catch (error) {
